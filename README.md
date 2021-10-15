@@ -30,6 +30,7 @@ Author: Chong Chen (cstchenc@163.com)
 
 # evns:
 conda create -n tf12 python==2.7.18
+
 conda install tensorflow-gpu==1.9.0 cudatoolkit==8.0 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/linux-64/
 
 ## Dataset
