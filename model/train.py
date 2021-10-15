@@ -8,12 +8,14 @@ Chong Chen (cstchenc@163.com)
 @references:
 
 '''
-
+import os
 import numpy as np
 import tensorflow as tf
 import pickle
 import datetime
 import NARRE
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 tf.flags.DEFINE_string("word2vec", "../data/google.bin", "Word2vec file with pre-trained embeddings (default: None)")
 tf.flags.DEFINE_string("valid_data","../data/music/music.test", " Data for validation")
@@ -86,7 +88,8 @@ def dev_step(u_batch, i_batch, uid, iid, reuid, reiid, y_batch, writer=None):
 
 if __name__ == '__main__':
     FLAGS = tf.flags.FLAGS
-    FLAGS._parse_flags()
+    #FLAGS._parse_flags()
+    FLAGS.flag_values_dict()
     print("\nParameters:")
     for attr, value in sorted(FLAGS.__flags.items()):
         print("{}={}".format(attr.upper(), value))
