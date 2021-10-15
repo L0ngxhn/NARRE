@@ -23,11 +23,14 @@ Author: Chong Chen (cstchenc@163.com)
 
 ## Environments
 
-- python 2.7
-- Tensorflow (version: 0.12.1)
+- python 2.7.18
+- tensorflow-gpu  1.9.0 
 - numpy
 - pandas
 
+# evns:
+conda create -n tf12 python==2.7.18
+conda install tensorflow-gpu==1.9.0 cudatoolkit==8.0 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/linux-64/
 
 ## Dataset
 
@@ -49,4 +52,4 @@ python train.py
 ```
 
 
-Last Update Date: April 14, 2018
+Last Update Date: 10 15, 2021
